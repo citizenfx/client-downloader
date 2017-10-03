@@ -1,0 +1,7 @@
+dist: trusty
+sudo: required
+language: go
+go: 1.8.3
+
+after_success:
+  - test -n "$TRAVIS_TAG" && curl -sL https://git.io/goreleaser | bash
